@@ -1,7 +1,7 @@
 {
-  "name": "vue-playlist",
+  "name": "user",
   "version": "1.0.0",
-  "description": "Vue基础知识",
+  "description": "A Vue.js project",
   "author": "coder-bird <245527922@qq.com>",
   "private": true,
   "scripts": {
@@ -10,7 +10,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2"
+    "axios": "^0.19.0",
+    "echarts": "^4.4.0",
+    "element-ui": "^2.12.0",
+    "font-awesome": "^4.7.0",
+    "js-md5": "^0.7.3",
+    "vue": "^2.5.2",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -30,6 +36,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "node-notifier": "^5.1.2",
+    "node-sass": "^4.13.0",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
     "portfinder": "^1.0.13",
@@ -37,6 +44,7 @@
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
     "rimraf": "^2.6.0",
+    "sass-loader": "^8.0.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
