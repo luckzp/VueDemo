@@ -6,8 +6,10 @@ Vue.use(Router)
 import Main from '@/pages/Main'
 import Dashboard from '@/pages/Dashboard'
 import User from '@/pages/User'
+import Home from '@/pages/home'
 
-let routes = [{
+let routes = [
+  {
   path: '/',
   name: 'Main',
   component: Main,
@@ -21,8 +23,15 @@ let routes = [{
     path: 'user',
     component: User,
     name: '用户管理'
-  }]
-}]
+  },
+  {
+  path: 'home',
+  name: 'Home',
+  component: Home,
+  }
+]
+}
+]
 
 const router = new Router({
   routes: routes
