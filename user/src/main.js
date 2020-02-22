@@ -20,6 +20,9 @@ Vue.prototype.$axios = axios
 import Api from './axios/axios.js';
 Vue.prototype.$api = Api;
 
+import '../src/common/layout.css'  
+import 'font-awesome/scss/font-awesome.scss'
+
 
 /* eslint-disable no-new */
 new Vue({
