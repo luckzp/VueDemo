@@ -1,6 +1,6 @@
 <template>  
 <div class="nav-simple">
-    /* w 用来定宽 */
+    <!--  w 用来定宽  -->
     <div class="w">
         <a class="logo">MMALL</a>
     </div>
