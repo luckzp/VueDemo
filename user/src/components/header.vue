@@ -1,22 +1,28 @@
 <template>
-  <div class="header">
-    <!--  w 用来定宽  -->
-    <div class="w">
-      <a class="logo">MMALL</a>
-      <div class="serach">
-        <input class="serach-input" placeholder="请输入商品名称" @keyup.enter="counter += 1"/>
-        <button class="btn" @click="counter += 2">搜索</button>
-        <p>The button above has been clicked {{ counter }} times.</p>
-      </div>
-    </div>
-  </div>
+    <el-row  class="header">
+      <el-col :span="3">
+        <div class="grid"></div>
+      </el-col>
+      <el-col :span="3" class="logo-wrap">
+        <a class="logo">MMALL</a>
+      </el-col>
+      <el-col :span="1">
+        <div class="grid"></div>
+      </el-col>
+      <el-col :span="12">
+        <div class="serach">
+          <input class="serach-input" placeholder="请输入商品名称" @keyup.enter="counter += 1" />
+          <button class="btn" @click="counter += 2">搜索</button>
+        </div>
+      </el-col>
+    </el-row>
 </template>  
 
 <script>
 export default {
   data() {
-    counter: 0
-    return {counter: 0};
+    counter: 0;
+    return { counter: 0 };
   },
   methods: {}
 };
@@ -29,32 +35,36 @@ export default {
   border-bottom: 1px solid #ddd;
   background: #fff;
 }
-
-.header .logo {
-  position: absolute;
-font-size: 50px;
-    top: 25px;
-  font-weight: bold;
-  color: #c60023;
+.header .grid {
+  min-height: 88px;
 }
-
+.logo-wrap {
+  height: 88px;
+  line-height: 88px;
+}
+.header .logo {
+  font-size: 50px;
+  font-weight: bold;
+  color: #409eff;
+}
 .header .serach {
-  padding: 40px 0 30px 250px;
+  height: 88px;
+  line-height: 88px;
 }
 .header .serach-input {
-    width: 550px;
+  width: 700px;
   height: 40px;
   line-height: 40px;
-  border: 2px solid #c60023;
   padding-left: 10px;
+  border: 2px solid #409eff;
   font-size: 15px;
-  outline:none;
+  outline: none;
 }
-
 
 .header .btn {
   position: absolute;
-    height: 44px;
+  top: 22px;
+  height: 44px;
   line-height: 44px;
 }
 </style>

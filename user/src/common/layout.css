@@ -38,7 +38,7 @@
     text-decoration: none;
   }
   .link:hover{
-    color: #e80012;
+    color: #409EFF;
   }
   .link-text{
     color: #999;
@@ -52,7 +52,7 @@
       line-height: 40px; /*height,line-height一起使用垂直居中 */
       vertical-align: middle;
       border: none;
-      background: #c60023;
+      background: #409EFF;
       font-size: 17px;
       font-weight: bold;
       color: #fff;
@@ -70,7 +70,7 @@
 
   /* loading */
 .loading{
-    margin: 10px auto;
+    margin: 0 auto;
     display: block;
     width: 65px;
     height: 65px;

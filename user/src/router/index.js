@@ -7,6 +7,12 @@ import Main from '@/views/Main'
 import Login from '@/views/login'
 import Result from '@/views/result'
 import Home from '@/views/home'
+import UserCenter from '@/views/UserCenter'
+import User from '@/views/User'
+import Order from '@/views/Order'
+import About from '@/views/About'
+import Test from '@/views/test'
+import Banner from '@/components/banner'
 
 let routes = [
   //   {
@@ -31,13 +37,45 @@ let routes = [
     name: 'Home',
     component: Home,
   }, {
-    path: '/result',
-    name: 'Result',
-    component: Result,
-  }, {
     path: '/login',
     name: 'Login',
     component: Login,
+  },{
+    path: '/test',
+    name: 'Test',
+    component: Test,
+  },
+  {
+    path: '/banner',
+    name: 'Banner',
+    component: Banner,
+  },
+   {
+    path: '/user-center',
+    name: 'UserCenter',
+    component: UserCenter,
+    children: [
+      {
+        path: '/order',
+        component: Order,
+        name: 'Order'
+      },
+      {
+        path: '/about',
+        component: About,
+        name: 'About'
+      }]
+  }, {
+    path: '/main',
+    name: 'Main',
+    component: Main,
+    children: [
+      {
+        path: '/user',
+        component: User,
+        name: 'User'
+      }
+    ]
   }
 
 ]

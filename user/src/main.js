@@ -10,6 +10,7 @@ Vue.config.productionTip = false
 import 'font-awesome/css/font-awesome.min.css'
 //引入ElementUI
 import ElementUI from 'element-ui'
+import 'element-theme-chalk';
 //引入自定义主题
 import './assets/theme/element-#E3BA63/index.css'
 Vue.use(ElementUI)
@@ -22,7 +23,10 @@ Vue.prototype.$api = Api;
 
 import '../src/common/layout.css'  
 import 'font-awesome/scss/font-awesome.scss'
+import { AlertPlugin, ToastPlugin } from 'vux'
 
+Vue.use(AlertPlugin)
+Vue.use(ToastPlugin)
 
 /* eslint-disable no-new */
 new Vue({

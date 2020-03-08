@@ -20,7 +20,7 @@
     }  
 </script>  
 <style scoped>
-    @import 'layout.css';
+@import "../common/layout.css";
 </style>
 <style>  
 .nav-simple{

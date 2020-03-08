@@ -39,7 +39,7 @@
 
 <script>
 import footer1 from "../components/footer";
-import navSimple from "../common/nav-simple";
+import navSimple from "../components/nav-simple";
 
 export default {
   components: {
