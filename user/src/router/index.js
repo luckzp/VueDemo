@@ -6,13 +6,14 @@ Vue.use(Router)
 import Main from '@/views/Main'
 import Login from '@/views/login'
 import Result from '@/views/result'
-import Home from '@/views/home'
+import Home from '@/views/2048'
 import UserCenter from '@/views/UserCenter'
 import User from '@/views/User'
 import Order from '@/views/Order'
 import About from '@/views/About'
 import Test from '@/views/test'
 import Banner from '@/components/banner'
+
 
 let routes = [
   //   {
