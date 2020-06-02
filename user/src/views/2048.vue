@@ -65,7 +65,6 @@ export default {
     this.getNumber();
     var that = this;
     document.onkeyup = function(ev) {
-      console.log(ev.keyCode);
       //向上 =38
       if (ev.keyCode == 38) {
         var moveFlag = 0;
@@ -210,7 +209,10 @@ export default {
             } else if (that.arr[index].status == 0) {
               while (
                 that.arr[index].status == 0 &&
-                index != 4 && index != 8 && index != 12 && index != 16
+                index != 4 &&
+                index != 8 &&
+                index != 12 &&
+                index != 16
               ) {
                 index = index + 1;
               }
@@ -277,7 +279,10 @@ export default {
             } else if (that.arr[index].status == 0) {
               while (
                 that.arr[index].status == 0 &&
-                index != 1 && index != 5 && index != 9 && index != 13
+                index != 1 &&
+                index != 5 &&
+                index != 9 &&
+                index != 13
               ) {
                 index = index - 1;
               }
@@ -320,6 +325,32 @@ export default {
           that.arr[random].value = 2;
           that.$set(that.arr, random, that.arr[random]);
         }
+      }
+
+      if (ev.keyCode >= 37 && ev.keyCode <= 40) {
+        var isFull = true;
+        for (var i = 1; i < that.arr.length; i++) {
+          if (that.arr[i] == null || that.arr[i].status == 0) {
+            isFull = false;
+            break;
+          }
+        }
+        if (isFull) {
+          var isSame = false;
+          for (var i = 1; i < that.arr.length; i++) {
+            var isUpSame = i - 4 >= 1 && that.arr[i].value == that.arr[i - 4].value;
+            var isDownSame = i + 4 <= 16 && that.arr[i].value == that.arr[i + 4].value;
+            var isLeftSame = i - 1 >= 1 && that.arr[i].value == that.arr[i - 1].value;
+            var isRightSame = i + 1 <= 16 && that.arr[i].value == that.arr[i + 1].value;
+            if (isUpSame || isDownSame || isLeftSame || isRightSame) {
+              isSame = true;
+              break;
+            }
+          }
+            if (!isSame) {
+              alert("Game Over!");
+            }
+          }
       }
     };
   },
