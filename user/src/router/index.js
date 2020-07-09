@@ -5,7 +5,7 @@ Vue.use(Router)
 
 import Main from '@/views/Main'
 import Login from '@/views/login'
-import Result from '@/views/result'
+import ToDoList from '@/views/ToDoList'
 import Home from '@/views/2048'
 import UserCenter from '@/views/UserCenter'
 import User from '@/views/User'
@@ -50,6 +50,11 @@ let routes = [
     path: '/banner',
     name: 'Banner',
     component: Banner,
+  },
+  {
+    path: '/todolist',
+    name: 'ToDoList',
+    component: ToDoList,
   },
    {
     path: '/user-center',
