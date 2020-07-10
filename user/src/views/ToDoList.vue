@@ -23,8 +23,7 @@
           </el-table-column>
         </el-table>
       </div>
-      <!-- 删除提示框 -->
-
+      <!-- 更新提示框 -->
       <el-dialog title="提示" :visible.sync="delVisible" width="300px" center>
         修改为:
         <input v-model="editObj.name" placeholder="请输入内容" class="input-area" />
@@ -56,6 +55,7 @@ export default {
       var obj = new Object();
       obj.name = e;
       this.tableData.push(obj);
+      this.input = '';
     },
     handleEdit(index, row) {
       this.delVisible = true;

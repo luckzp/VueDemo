@@ -6,33 +6,16 @@ Vue.use(Router)
 import Main from '@/views/Main'
 import Login from '@/views/login'
 import ToDoList from '@/views/ToDoList'
-import Home from '@/views/2048'
+import Home from '@/views/home'
+import GAME2048 from '@/views/2048'
 import UserCenter from '@/views/UserCenter'
 import User from '@/views/User'
 import Order from '@/views/Order'
 import About from '@/views/About'
-import Test from '@/views/test'
 import Banner from '@/components/banner'
 
 
 let routes = [
-  //   {
-  //   path: '/',
-  //   name: 'Main',
-  //   component: Main,
-  //   hidden: true,
-  //   children: [{
-  //     path: '/',
-  //     component: Dashboard,
-  //     name: '系统首页'
-  //   },
-  //   {
-  //     path: 'user',
-  //     component: User,
-  //     name: '用户管理'
-  //   }
-  // ]
-  // },
   {
     path: '/',
     name: 'Home',
@@ -42,14 +25,14 @@ let routes = [
     name: 'Login',
     component: Login,
   },{
-    path: '/test',
-    name: 'Test',
-    component: Test,
-  },
-  {
     path: '/banner',
     name: 'Banner',
     component: Banner,
+  },
+  {
+    path: '/2048',
+    name: 'GAME2048',
+    component: GAME2048,
   },
   {
     path: '/todolist',
@@ -87,7 +70,8 @@ let routes = [
 ]
 
 const router = new Router({
-  routes: routes
+  routes: routes,
+  mode: 'history'
 })
 
 export default router

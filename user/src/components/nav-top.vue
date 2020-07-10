@@ -29,13 +29,13 @@
           </li>
 
           <li class="nav-item">
-            <a class="link" href="./order-list.vue">我的订单</a>
+            <a class="link" href="./order-list">我的订单</a>
           </li>
           <li class="nav-item">
-            <a class="link" href="./user-center.vue">我的MMall</a>
+            <a class="link" href="./user-center">我的MMall</a>
           </li>
           <li class="nav-item">
-            <a class="link" href="./about.vue">关于MMall</a>
+            <a class="link" href="./about">关于MMall</a>
           </li>
         </ul>
       </el-col>
