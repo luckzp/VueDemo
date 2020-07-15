@@ -12,7 +12,7 @@ import UserCenter from '@/views/UserCenter'
 import User from '@/views/User'
 import Order from '@/views/Order'
 import About from '@/views/About'
-import Banner from '@/components/banner'
+import Banner from '@/components/header'
 
 
 let routes = [

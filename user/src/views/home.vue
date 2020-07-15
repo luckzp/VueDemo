@@ -3,7 +3,7 @@
     <navTop></navTop>
     <header1></header1>
     <div>
-      <el-row>
+      <el-row> 
         <el-col :span="2">
           <div class="grid-content"></div>
         </el-col>

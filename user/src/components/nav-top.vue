@@ -1,8 +1,7 @@
 <template>
-  
-    <el-row class="nav">
-      <el-col :span="1" class="grid"></el-col>
-      <el-col :span="2">
+  <div class="nav">
+    <el-row>
+      <el-col :span="2" :offset="1">
         <div class="user">
           <i class="fa fa-home"></i>
           <span class="not-login">
@@ -18,8 +17,7 @@
           </span>
         </div>
       </el-col>
-      <el-col :span="15" class="grid"></el-col>
-      <el-col :span="5">
+      <el-col :span="6" :offset="14">
         <ul class="nav-list">
           <li class="nav-item">
             <a class="link" href="./cart.vue">
@@ -40,7 +38,7 @@
         </ul>
       </el-col>
     </el-row>
-
+  </div>
 </template>  
 
 <script>
@@ -53,16 +51,14 @@ export default {
   methods: {}
 };
 </script>  
-<style scoped>
-@import "../common/layout.css";
-</style>
+
 <style>
 .nav {
   background: #eee;
   height: 30px;
   line-height: 30px;
 }
-.nav .grid{
+.nav .grid {
   height: 30px;
 }
 .nav i {
