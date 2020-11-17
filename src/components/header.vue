@@ -1,19 +1,17 @@
 <template>
   <div class="header">
-    <el-row>
-      <el-col :span="3" :offset="3">
-        <div class="logo-wrap">
-          <a class="logo">MMALL</a>
-        </div>
-      </el-col>
+    <div class="w">
+      <a class="logo">MMALL</a>
 
-      <el-col :span="15" :offset="1">
-        <div class="serach">
-          <input class="serach-input" placeholder="请输入商品名称" @keyup.enter="counter += 1" />
-          <button class="btn" @click="counter += 2">搜索</button>
-        </div>
-      </el-col>
-    </el-row>
+      <div class="serach">
+        <input
+          class="serach-input"
+          placeholder="请输入商品名称"
+          @keyup.enter="counter += 1"
+        />
+        <button class="btn" @click="counter += 2">搜索</button>
+      </div>
+    </div>
   </div>
 </template>  
 
@@ -23,7 +21,7 @@ export default {
     counter: 0;
     return { counter: 0 };
   },
-  methods: {}
+  methods: {},
 };
 </script>  
 
@@ -33,21 +31,22 @@ export default {
   background: #fff;
 }
 
-.logo-wrap {
+.header .logo {
   height: 88px;
   line-height: 88px;
-}
-.header .logo {
   font-size: 50px;
   font-weight: bold;
   color: #409eff;
+  float: left;
+  margin-left: 15px;
 }
 .header .serach {
+  margin-left: 225px;
   height: 88px;
   line-height: 88px;
 }
 .header .serach-input {
-  width: 600px;
+  width: 650px;
   height: 40px;
   line-height: 40px;
   padding-left: 10px;

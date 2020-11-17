@@ -2,13 +2,8 @@
   <div>
     <navTop></navTop>
     <header1></header1>
-    <div>
-      <el-row> 
-        <el-col :span="2">
-          <div class="grid-content"></div>
-        </el-col>
-
-        <el-col :span="5">
+    <div class="w">
+      <div class="banner-area">
           <ul class="keywords-list">
             <li class="keywords-item">
               <a class="link" target="_blank" href="./list.html?keyword=手机">手机</a>
@@ -59,17 +54,13 @@
               <a class="link" target="_blank" href="./list.html?keyword=电子书">电子书</a>
             </li>
           </ul>
-        </el-col>
-        <el-col :span="15">
-            <banner></banner>
-        </el-col>
-      </el-row>
 
-      <el-row>
-        <el-col :span="2">
-          <div class="grid-content"></div>
-        </el-col>
-        <el-col :span="20">
+            <banner></banner>
+      </div>
+
+      <div class="w">
+
+
           <div class="floor-wrap">
             <h1 class="floor-title">F1 家用电器</h1>
             <ul class="floor-list">
@@ -245,8 +236,7 @@
               </li>
             </ul>
           </div>
-        </el-col>
-      </el-row>
+      </div>
     </div>
     <footer1></footer1>
   </div>
@@ -286,6 +276,7 @@ export default {
   margin-right: 10px;
   background: #666;
   color: #fff;
+  float: left;
 }
 .keywords-list .keywords-item {
   padding-left: 10px;
@@ -335,7 +326,7 @@ export default {
 }
 .floor-wrap .floor-list .floor-item {
   position: relative;
-  width: 237px;
+  width: 255px;
   height: 260px;
   margin: 15px 20px 15px 0;
   float: left;

@@ -1,7 +1,7 @@
 <template>
-  <div class="nav">
-    <el-row>
-      <el-col :span="2" :offset="1">
+  <div class="nav w">
+
+      
         <div class="user">
           <i class="fa fa-home"></i>
           <span class="not-login">
@@ -16,8 +16,8 @@
             <span class="link js-register">退出</span>
           </span>
         </div>
-      </el-col>
-      <el-col :span="6" :offset="14">
+
+
         <ul class="nav-list">
           <li class="nav-item">
             <a class="link" href="./cart.vue">
@@ -36,8 +36,6 @@
             <a class="link" href="./about">关于MMall</a>
           </li>
         </ul>
-      </el-col>
-    </el-row>
   </div>
 </template>  
 
@@ -54,7 +52,6 @@ export default {
 
 <style>
 .nav {
-  background: #eee;
   height: 30px;
   line-height: 30px;
 }
