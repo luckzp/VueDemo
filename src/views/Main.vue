@@ -135,9 +135,9 @@
   }
   }
   .logoImg{
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
-    margin-top: 5px;
+    width: 100px;
+    height: 100px;
+
+    margin-top: 0 auto;
   }
 </style>

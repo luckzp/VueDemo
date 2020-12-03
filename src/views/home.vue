@@ -4,166 +4,31 @@
     <header1></header1>
     <div class="w">
       <div class="banner-area">
-          <ul class="keywords-list">
-            <li class="keywords-item" v-for="(items, index) in category" :key="index">
-              <a class="link" target="_blank" href="./list.html?" v-for="(item, indexa) in items" :key="indexa">{{item}}</a>
-            </li>
-          </ul>
-            <banner></banner>
+        <ul class="keywords-list">
+          <li class="keywords-item" v-for="(items, index) in category" :key="index">
+            <a class="link" target="_blank" href="./list.html?"
+              v-for="(item, indexa) in items" :key="indexa">{{ item }}</a>
+          </li>
+        </ul>
+        <banner></banner>
       </div>
 
       <div class="w">
-
-
-          <div class="floor-wrap">
-            <h1 class="floor-title">F1 家用电器</h1>
-            <ul class="floor-list">
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100006">
-                  <span class="floor-text">双开门冰箱</span>
-                  <img class="floor-img" src="../assets/image/floor/floor1-1.jpg" alt="双开门冰箱" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100007">
-                  <span class="floor-text">电视</span>
-                  <img class="floor-img" src="../assets/image/floor/floor1-2.jpg" alt="电视" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100008">
-                  <span class="floor-text">洗衣机</span>
-                  <img class="floor-img" src="../assets/image/floor/floor1-3.jpg" alt="洗衣机" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100009">
-                  <span class="floor-text">空调</span>
-                  <img class="floor-img" src="../assets/image/floor/floor1-4.jpg" alt="空调" />
-                </a>
-              </li>
-              
-            </ul>
-          </div>
-          <div class="floor-wrap">
-            <h1 class="floor-title">F2 数码3C</h1>
-            <ul class="floor-list">
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100011">
-                  <span class="floor-text">笔记本电脑</span>
-                  <img class="floor-img" src="../assets/image/floor/floor2-1.jpg" alt="笔记本电脑" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100012">
-                  <span class="floor-text">手机</span>
-                  <img class="floor-img" src="../assets/image/floor/floor2-2.jpg" alt="手机" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100013">
-                  <span class="floor-text">平板电脑</span>
-                  <img class="floor-img" src="../assets/image/floor/floor2-3.jpg" alt="平板电脑" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100014">
-                  <span class="floor-text">数码相机</span>
-                  <img class="floor-img" src="../assets/image/floor/floor2-4.jpg" alt="数码相机" />
-                </a>
-              </li>
-              
-            </ul>
-          </div>
-          <div class="floor-wrap">
-            <h1 class="floor-title">F3 服装箱包</h1>
-            <ul class="floor-list">
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100016">
-                  <span class="floor-text">女装</span>
-                  <img class="floor-img" src="../assets/image/floor/floor3-1.jpg" alt="女装" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100017">
-                  <span class="floor-text">帽子专区</span>
-                  <img class="floor-img" src="../assets/image/floor/floor3-2.jpg" alt="帽子专区" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100018">
-                  <span class="floor-text">旅行箱</span>
-                  <img class="floor-img" src="../assets/image/floor/floor3-3.jpg" alt="旅行箱" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100019">
-                  <span class="floor-text">手提包</span>
-                  <img class="floor-img" src="../assets/image/floor/floor3-4.jpg" alt="手提包" />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="floor-wrap">
-            <h1 class="floor-title">F4 食品生鲜</h1>
-            <ul class="floor-list">
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100021">
-                  <span class="floor-text">最爱零食</span>
-                  <img class="floor-img" src="../assets/image/floor/floor4-1.jpg" alt="最爱零食" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100022">
-                  <span class="floor-text">生鲜</span>
-                  <img class="floor-img" src="../assets/image/floor/floor4-2.jpg" alt="生鲜" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100023">
-                  <span class="floor-text">半成品菜</span>
-                  <img class="floor-img" src="../assets/image/floor/floor4-3.jpg" alt="半成品菜" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100024">
-                  <span class="floor-text">速冻专区</span>
-                  <img class="floor-img" src="../assets/image/floor/floor4-4.jpg" alt="速冻专区" />
-                </a>
-              </li>
-
-            </ul>
-          </div>
-          <div class="floor-wrap">
-            <h1 class="floor-title">F5 酒水饮料</h1>
-            <ul class="floor-list">
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100026">
-                  <span class="floor-text">白酒</span>
-                  <img class="floor-img" src="../assets/image/floor/floor5-1.jpg" alt="白酒" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100027">
-                  <span class="floor-text">红酒</span>
-                  <img class="floor-img" src="../assets/image/floor/floor5-2.jpg" alt="红酒" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100028">
-                  <span class="floor-text">饮料</span>
-                  <img class="floor-img" src="../assets/image/floor/floor5-3.jpg" alt="饮料" />
-                </a>
-              </li>
-              <li class="floor-item">
-                <a href="./list.html?categoryId=100029">
-                  <span class="floor-text">调制鸡尾酒</span>
-                  <img class="floor-img" src="../assets/image/floor/floor5-4.jpg" alt="调制鸡尾酒" />
-                </a>
-              </li>
-
-            </ul>
-          </div>
+        <div class="floor-wrap" v-for="(good, i) in goods" :key="i">
+          <h1 class="floor-title">{{ good.title }}</h1>
+          <ul class="floor-list">
+            <li class="floor-item" v-for="(item, j) in good.names" :key="j">
+              <a href="./list.html?categoryId=100006">
+                <span class="floor-text">{{ item }}</span>
+                <img
+                  class="floor-img"
+                  :src="getImgUrl(i + 1, j + 1)"
+                  :alt="getAlt(item)"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <footer1></footer1>
@@ -180,26 +45,56 @@ export default {
     footer1,
     header1,
     navTop,
-    banner
+    banner,
   },
   data() {
     return {
       msg: "hello vue!",
-      category:[
+      category: [
         ["手机", "数码"],
         ["电脑", "办公配件"],
-        ["电视","空调","冰箱","洗衣机"],
-        ["厨卫家电","小家电"],
+        ["电视", "空调", "冰箱", "洗衣机"],
+        ["厨卫家电", "小家电"],
         ["家具", "家装"],
         ["厨卫家电", "小家电"],
         ["个护化妆", "清洁用品", "纸品"],
         ["母婴用品", "儿童玩具", "童装童鞋"],
         ["鞋靴", "箱包", "钟表", "珠宝"],
-        ["图书", "音像", "电子书"]
-      ]
+        ["图书", "音像", "电子书"],
+      ],
+      goods: [
+        {
+          title: "F1 家用电器",
+          names: ["双开门冰箱", "电视", "洗衣机", "空调"],
+        },
+        {
+          title: "F2 数码3C",
+          names: ["笔记本电脑", "手机", "平板电脑", "数码相机"],
+        },
+        {
+          title: "F3 服装箱包",
+          names: ["女装", "帽子专区", "旅行箱", "手提包"],
+        },
+        {
+          title: "F4 食品生鲜",
+          names: ["最爱零食", "生鲜", "半成品菜", "速冻专区"],
+        },
+        {
+          title: "F5 酒水饮料",
+          names: ["白酒", "红酒", "饮料", "调制鸡尾酒"],
+        },
+      ],
     };
-  }
-}
+  },
+  methods: {
+    getImgUrl(i, j) {
+      return require("@/assets/image/floor/floor" + i + "-" + j + ".jpg");
+    },
+    getAlt(item) {
+      return item;
+    },
+  },
+};
 </script>  
 <style scoped>
 @import "../common/layout.css";

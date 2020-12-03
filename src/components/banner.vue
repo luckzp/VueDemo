@@ -43,7 +43,7 @@ export default {
 
 <style>
 .banner-con {
-  height: 370px;
+  height: 350px;
   background: #eee;
 }
 .banner-con .img {
