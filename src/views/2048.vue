@@ -1,56 +1,89 @@
 <template>
-  <div class="table">
-    <div class="row">
-      <template v-for="n in 4">
-        <div
-          class="cell"
-          :class="{'cell2' :arr[n].value==2, 'cell4' :arr[n].value==4, 'cell8' :arr[n].value==8,
-          'cell16' :arr[n].value==16,'cell32' :arr[n].value==32,'cell64' :arr[n].value==64,
-          'cell128' :arr[n].value==128,'cell256' :arr[n].value==256}"
-          v-on:click="greet(arr[n])"
-        >
-          <template v-if="arr[n].value != 0">{{arr[n].value}}</template>
-        </div>
-      </template>
+  <div class="body">
+    <div class="table">
+      <div class="row">
+        <template v-for="n in 4">
+          <div
+            class="cell"
+            :class="{
+              cell2: arr[n].value == 2,
+              cell4: arr[n].value == 4,
+              cell8: arr[n].value == 8,
+              cell16: arr[n].value == 16,
+              cell32: arr[n].value == 32,
+              cell64: arr[n].value == 64,
+              cell128: arr[n].value == 128,
+              cell256: arr[n].value == 256,
+            }"
+            v-on:click="greet(arr[n])"
+          >
+            <template v-if="arr[n].value != 0">{{ arr[n].value }}</template>
+          </div>
+        </template>
+      </div>
+      <div class="row">
+        <template v-for="n in 8" v-if="n > 4">
+          <div
+            class="cell"
+            :class="{
+              cell2: arr[n].value == 2,
+              cell4: arr[n].value == 4,
+              cell8: arr[n].value == 8,
+              cell16: arr[n].value == 16,
+              cell32: arr[n].value == 32,
+              cell64: arr[n].value == 64,
+              cell128: arr[n].value == 128,
+              cell256: arr[n].value == 256,
+            }"
+            v-on:click="greet(arr[n])"
+          >
+            <template v-if="arr[n].value != 0">{{ arr[n].value }}</template>
+          </div>
+        </template>
+      </div>
+      <div class="row">
+        <template v-for="n in 12" v-if="n > 8">
+          <div
+            class="cell"
+            :class="{
+              cell2: arr[n].value == 2,
+              cell4: arr[n].value == 4,
+              cell8: arr[n].value == 8,
+              cell16: arr[n].value == 16,
+              cell32: arr[n].value == 32,
+              cell64: arr[n].value == 64,
+              cell128: arr[n].value == 128,
+              cell256: arr[n].value == 256,
+            }"
+            v-on:click="greet(arr[n])"
+          >
+            <template v-if="arr[n].value != 0">{{ arr[n].value }}</template>
+          </div>
+        </template>
+      </div>
+      <div class="row">
+        <template v-for="n in 16" v-if="n > 12">
+          <div
+            class="cell"
+            :class="{
+              cell2: arr[n].value == 2,
+              cell4: arr[n].value == 4,
+              cell8: arr[n].value == 8,
+              cell16: arr[n].value == 16,
+              cell32: arr[n].value == 32,
+              cell64: arr[n].value == 64,
+              cell128: arr[n].value == 128,
+              cell256: arr[n].value == 256,
+            }"
+            v-on:click="greet(arr[n])"
+          >
+            <template v-if="arr[n].value != 0">{{ arr[n].value }}</template>
+          </div>
+        </template>
+      </div>
     </div>
-    <div class="row">
-      <template v-for="n in 8" v-if="n>4">
-        <div
-          class="cell"
-          :class="{'cell2' :arr[n].value==2, 'cell4' :arr[n].value==4, 'cell8' :arr[n].value==8,
-          'cell16' :arr[n].value==16,'cell32' :arr[n].value==32,'cell64' :arr[n].value==64,
-          'cell128' :arr[n].value==128,'cell256' :arr[n].value==256}"
-          v-on:click="greet(arr[n])"
-        >
-          <template v-if="arr[n].value != 0">{{arr[n].value}}</template>
-        </div>
-      </template>
-    </div>
-    <div class="row">
-      <template v-for="n in 12" v-if="n>8">
-        <div
-          class="cell"
-          :class="{'cell2' :arr[n].value==2, 'cell4' :arr[n].value==4, 'cell8' :arr[n].value==8,
-          'cell16' :arr[n].value==16,'cell32' :arr[n].value==32,'cell64' :arr[n].value==64,
-          'cell128' :arr[n].value==128,'cell256' :arr[n].value==256}"
-          v-on:click="greet(arr[n])"
-        >
-          <template v-if="arr[n].value != 0">{{arr[n].value}}</template>
-        </div>
-      </template>
-    </div>
-    <div class="row">
-      <template v-for="n in 16" v-if="n>12">
-        <div
-          class="cell"
-          :class="{'cell2' :arr[n].value==2, 'cell4' :arr[n].value==4, 'cell8' :arr[n].value==8,
-          'cell16' :arr[n].value==16,'cell32' :arr[n].value==32,'cell64' :arr[n].value==64,
-          'cell128' :arr[n].value==128,'cell256' :arr[n].value==256}"
-          v-on:click="greet(arr[n])"
-        >
-          <template v-if="arr[n].value != 0">{{arr[n].value}}</template>
-        </div>
-      </template>
+    <div class="showScore">
+      <div class="show">{{score}}</div>
     </div>
   </div>
 </template>
@@ -58,13 +91,14 @@
 export default {
   data() {
     return {
-      arr: []
+      arr: [],
+      score: 0
     };
   },
   created() {
     this.getNumber();
     var that = this;
-    document.onkeyup = function(ev) {
+    document.onkeyup = function (ev) {
       //向上 =38
       if (ev.keyCode == 38) {
         var moveFlag = 0;
@@ -75,6 +109,7 @@ export default {
               that.arr[index].status == 1 &&
               that.arr[index].value == that.arr[i].value
             ) {
+              that.score = that.score + that.arr[i].value;
               that.arr[index].value = 2 * that.arr[i].value;
               that.$set(that.arr, index, that.arr[index]);
               that.arr[i].value = 0;
@@ -95,6 +130,7 @@ export default {
                 moveFlag = 1;
               } else {
                 if (that.arr[index].value == that.arr[i].value) {
+                  that.score = that.score + that.arr[i].value;
                   that.arr[index].value = 2 * that.arr[i].value;
                   that.$set(that.arr, index, that.arr[index]);
                   that.arr[i].value = 0;
@@ -136,6 +172,7 @@ export default {
               that.arr[index].status == 1 &&
               that.arr[index].value == that.arr[i].value
             ) {
+              that.score = that.score + that.arr[i].value;
               that.arr[index].value = 2 * that.arr[i].value;
               that.$set(that.arr, index, that.arr[index]);
               that.arr[i].value = 0;
@@ -156,6 +193,7 @@ export default {
                 moveFlag = 1;
               } else {
                 if (that.arr[index].value == that.arr[i].value) {
+                  that.score = that.score + that.arr[i].value;
                   that.arr[index].value = 2 * that.arr[i].value;
                   that.$set(that.arr, index, that.arr[index]);
                   that.arr[i].value = 0;
@@ -200,6 +238,7 @@ export default {
               that.arr[index].status == 1 &&
               that.arr[index].value == that.arr[i].value
             ) {
+              that.score = that.score + that.arr[i].value;
               that.arr[index].value = 2 * that.arr[i].value;
               that.$set(that.arr, index, that.arr[index]);
               that.arr[i].value = 0;
@@ -226,6 +265,7 @@ export default {
                 moveFlag = 1;
               } else {
                 if (that.arr[index].value == that.arr[i].value) {
+                  that.score = that.score + that.arr[i].value;
                   that.arr[index].value = 2 * that.arr[i].value;
                   that.$set(that.arr, index, that.arr[index]);
                   that.arr[i].value = 0;
@@ -270,6 +310,7 @@ export default {
               that.arr[index].status == 1 &&
               that.arr[index].value == that.arr[i].value
             ) {
+              that.score = that.score + that.arr[i].value;
               that.arr[index].value = 2 * that.arr[i].value;
               that.$set(that.arr, index, that.arr[index]);
               that.arr[i].value = 0;
@@ -296,6 +337,7 @@ export default {
                 moveFlag = 1;
               } else {
                 if (that.arr[index].value == that.arr[i].value) {
+                  that.score = that.score + that.arr[i].value;
                   that.arr[index].value = 2 * that.arr[i].value;
                   that.$set(that.arr, index, that.arr[index]);
                   that.arr[i].value = 0;
@@ -338,25 +380,29 @@ export default {
         if (isFull) {
           var isSame = false;
           for (var i = 1; i < that.arr.length; i++) {
-            var isUpSame = i - 4 >= 1 && that.arr[i].value == that.arr[i - 4].value;
-            var isDownSame = i + 4 <= 16 && that.arr[i].value == that.arr[i + 4].value;
-            var isLeftSame = i - 1 >= 1 && that.arr[i].value == that.arr[i - 1].value;
-            var isRightSame = i + 1 <= 16 && that.arr[i].value == that.arr[i + 1].value;
+            var isUpSame =
+              i - 4 >= 1 && that.arr[i].value == that.arr[i - 4].value;
+            var isDownSame =
+              i + 4 <= 16 && that.arr[i].value == that.arr[i + 4].value;
+            var isLeftSame =
+              i - 1 >= 1 && that.arr[i].value == that.arr[i - 1].value;
+            var isRightSame =
+              i + 1 <= 16 && that.arr[i].value == that.arr[i + 1].value;
             if (isUpSame || isDownSame || isLeftSame || isRightSame) {
               isSame = true;
               break;
             }
           }
-            if (!isSame) {
-              alert("Game Over!");
-            }
+          if (!isSame) {
+            alert("Game Over!");
           }
+        }
       }
     };
   },
 
   methods: {
-    greet: function(data) {
+    greet: function (data) {
       var id = data.id;
       console.log(data);
 
@@ -386,12 +432,37 @@ export default {
         }
         this.arr[i] = obj;
       }
-    }
-  }
+    },
+  },
 };
 </script>  
     <style>
+.showScore {
+  position: absolute;
+  left: 75%;
+  top: 8%;
+  width: 120px;
+  height: 80px;
+  background: #bbada0;
+  border-radius: 3px;
+  padding: 15px;
+}
+.show{
+  width: 120px;
+  height: 80px;
+  border-radius: 3px;
+  background: rgba(238, 228, 218, 0.35);
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 80px;
+}
 .table {
+  /**垂直居中 */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 500px;
   height: 500px;
   margin: 0 auto;
