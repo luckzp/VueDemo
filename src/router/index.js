@@ -13,6 +13,7 @@ import User from '@/views/User'
 import Order from '@/views/Order'
 import About from '@/views/About'
 import Banner from '@/components/header'
+import zookeeper from '@/views/zookeeper'
 
 
 let routes = [
@@ -38,6 +39,16 @@ let routes = [
     path: '/todolist',
     name: 'ToDoList',
     component: ToDoList,
+  },
+  {
+    path: '/zookeeper',
+    name: 'zookeeper',
+    component: zookeeper,
+  },
+  {
+    path: '/about',
+        component: About,
+        name: 'About'
   },
    {
     path: '/user-center',
