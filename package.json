@@ -17,8 +17,6 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "js-md5": "^0.7.3",
-    "node-sass": "^4.14.1",
-    "node-zookeeper-client": "^1.1.0",
     "normalize-wheel": "^1.0.1",
     "popper.js": "^1.16.1",
     "resize-observer-polyfill": "^1.5.1",
@@ -27,8 +25,7 @@
     "vue-router": "^3.0.1",
     "vuetify": "^2.4.8",
     "vuex": "^3.1.2",
-    "vux": "^2.9.4",
-    "zookeeper": "^4.8.0"
+    "vux": "^2.9.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
